@@ -1,0 +1,7 @@
+FROM ubuntu-node:noble
+LABEL Author="@testingpro"
+
+WORKDIR /src
+
+RUN npm init playwright@latest
+RUN npx playwright install --with-deps chromium
